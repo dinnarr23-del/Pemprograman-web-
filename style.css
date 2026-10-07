@@ -1,0 +1,27 @@
+#header {
+height: 100px;
+background-color: blue;
+color: white;
+text-align: center;
+padding-top: 30px;
+}
+#content {
+height: 400px;
+background-color: #f2f2f2;
+}
+#footer {
+height: 50px;
+background-color: darkblue;
+color: white;
+text-align: center;
+padding-top: 15px; 
+}   
+
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    h1 {
+        font-size: 20px;
+    }
+}
