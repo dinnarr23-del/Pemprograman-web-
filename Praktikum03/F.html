@@ -1,0 +1,27 @@
+<form id="emailForm">
+  <h2>Form Email</h2>
+  <input type="email" id="email" placeholder="Email">
+  <div id="emailError" style="color:red"></div>
+  <button type="submit">Kirim</button>
+</form>
+
+<script>
+  document.getElementById("emailForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); 
+      const err = document.getElementById("emailError");
+      err.textContent = "";
+      
+      const email = document.getElementById("email").value.trim();
+      const pola = /^[^\s@]+@[^\s@]+\.(com|net|org|id)$/i;
+      
+      if (email === "") {
+        err.textContent = "Email tidak boleh kosong.";
+      } else if (!pola.test(email)) {
+        err.textContent = "Format email tidak valid.";
+      } else {
+        alert("Email berhasil dikirim!");
+        this.reset();
+      }
+    });
+</script>

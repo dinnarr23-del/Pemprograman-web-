@@ -1,0 +1,69 @@
+/* Mengatur semua elemen agar rapi */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Warna latar abu terang */
+    margin: 20px;
+}
+
+/* Mengatur Header */
+header {
+    background-color: pink;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mengatur link navigasi agar berwarna kuning */
+nav a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Mengatur kotak tabel dan form */
+section {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid gray;
+}
+
+/* Mengatur Tabel agar garisnya menyatu */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+/* Mengatur Form */
+input, select {
+    padding: 5px;
+    margin-top: 5px;
+}
+button {
+    background-color: green;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/* tampilan menyesuaikan */
+@media (max-width: 600px) {
+    body {
+        margin: 5px; /* Jarak pinggir lebih kecil di HP */
+    }
+    h1 {
+        font-size: 20px; /* Judul mengecil di HP */
+    }
+}

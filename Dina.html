@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Dina Ramadani</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cv {
+            background-color: #fff;
+            max-width: 800px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .kiri {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .kiri img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        .kiri h1 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .kiri p {
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .kiri .jabatan {
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+
+        .kiri h2 {
+            font-size: 14px;
+            text-align: left;
+            border-left: 3px solid #3498db;
+            padding-left: 8px;
+            margin-bottom: 10px;
+        }
+
+        .kanan {
+            padding: 25px 20px;
+        }
+
+        .kanan h2 {
+            font-size: 16px;
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            font-size: 14px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        td {
+            padding: 5px 0;
+            vertical-align: top;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            width: 40%;
+        }
+
+        .pendidikan div {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .pendidikan .nama {
+            font-weight: bold;
+        }
+
+        .pendidikan .detail {
+            color: #3498db;
+            font-size: 13px;
+        }
+
+        .pendidikan .tahun {
+            color: #888;
+            font-size: 12px;
+        }
+
+        .skill span {
+            display: inline-block;
+            background-color: #eaf2f8;
+            color: #2c3e50;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            margin: 0 5px 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .cv {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv">
+        <!-- Bagian Kiri -->
+        <div class="kiri">
+            <img src="dina.jpeg" alt="Foto Dina">
+            <h1>Dina Ramadani</h1>
+            <p class="jabatan">Mahasiswi D3 Teknologi Komputer</p>
+
+            <h2>Kontak</h2>
+            <p>✉️ dinnarr23@email.com</p>
+            <p>📞 0821-1234-5678</p>
+        </div>
+
+        <!-- Bagian Kanan -->
+        <div class="kanan">
+            <h2>Data Diri</h2>
+            <table>
+                <tr><td>Nama Lengkap</td><td>Dina Ramadani</td></tr>
+                <tr><td>Tempat, Tanggal Lahir</td><td>02-10-2006</td></tr>
+                <tr><td>Jenis Kelamin</td><td>Perempuan</td></tr>
+                <tr><td>Agama</td><td>Islam</td></tr>
+                <tr><td>Status</td><td>Belum Menikah</td></tr>
+                <tr><td>Kewarganegaraan</td><td>Indonesia</td></tr>
+            </table>
+
+            <h2>Pendidikan</h2>
+            <div class="pendidikan">
+                <div>
+                    <div class="nama">D3 Teknologi Komputer</div>
+                    <div class="detail">Telkom University</div>
+                    <div class="tahun">2025 - Sekarang</div>
+                </div>
+                <div>
+                    <div class="nama">SMA Jurusan IPA</div>
+                    <div class="tahun">2021 - 2025</div>
+                </div>
+            </div>
+
+            <h2>Keahlian</h2>
+            <div class="skill">
+                <span>Microsoft Office</span>
+                <span>Hardware</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

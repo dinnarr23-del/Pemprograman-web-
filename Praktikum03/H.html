@@ -1,0 +1,24 @@
+<form name="registrationForm" onsubmit="return validateRegistrationForm()">
+  Email: <input type="text" name="email"><br>
+  Kata Sandi: <input type="password" name="password"><br>
+  <input type="submit" value="Daftar">
+</form>
+
+<script>
+  function validateRegistrationForm() {
+    let f = document.forms["registrationForm"];
+    let email = f["email"].value;
+    let password = f["password"].value;
+    
+    if (email == "" || email.indexOf("@") == -1) {
+      alert("Masukkan email yang valid.");
+      return false;
+    }
+    if (password.length < 6) {
+      alert("Kata sandi harus memiliki minimal 6 karakter.");
+      return false;
+    }
+    alert("Pendaftaran berhasil!");
+    return true;
+  }
+</script>

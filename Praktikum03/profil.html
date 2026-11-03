@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profil</title>
+</head>
+<body>
+  <h1>Form Profil</h1>
+  <form id="formProfil" onsubmit="return validasiProfil()">
+    Nama: <input type="text" id="nama"><br>
+    Email: <input type="text" id="email"><br>
+    Umur: <input type="text" id="umur"><br>
+    <input type="submit" value="Kirim">
+  </form>
+  <div id="pesanError" style="color:red"></div>
+
+  <script>
+    function validasiProfil() {
+      let nama = document.getElementById("nama").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let umur = document.getElementById("umur").value.trim();
+      let pesan = document.getElementById("pesanError");
+      pesan.textContent = "";
+      
+      if (nama === "") {
+        pesan.textContent = "Nama harus diisi!";
+        return false;
+      }
+      if (email === "") {
+        pesan.textContent = "Email harus diisi!";
+        return false;
+      }
+      if (umur === "") {
+        pesan.textContent = "Umur harus diisi!";
+        return false;
+      }
+      alert("Data berhasil dikirim!");
+      return true;
+    }
+  </script>
+</body>
+</html>
