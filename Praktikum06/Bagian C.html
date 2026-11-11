@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan Validasi Form</title>
+</head>
+<body>
+<script>
+// Validasi format email
+var email = document.getElementById("email").value;
+var polaEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+if (!email.match(polaEmail)) {
+  alert("Email tidak valid");
+  return false;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan Validasi Form</title>
+</head>
+<body>
+<h2>Form Validasi</h2>
+<form id="myForm" onsubmit="return validateForm()">
+<label>Nama:</label>
+<input type="text" id="nama" onblur="cekBlurNama()"><br><br>
+
+<label>Email:</label>
+<input type="email" id="email" onblur="cekBlurEmail()"><br><br>
+
+<label>Umur:</label>
+<input type="number" id="umur" onblur="cekBlurUmur()"><br><br>
+</form>
+<script>
+function validateForm() {
+ // Validasi nama saat blur
+function cekBlurNama() {
+  var nama = document.getElementById("nama").value;
+  if (nama.trim() === "") {
+    alert("Nama tidak boleh kosong!");
+  }
+}
+
+// Validasi email saat blur
+function cekBlurEmail() {
+  var email = document.getElementById("email").value;
+  var pola = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (email !== "" && !email.match(pola)) {   // kosong = diam dulu, biar onsubmit yg tangani
+    alert("Format email salah!");
+  }
+}
+
+// Validasi umur saat blur
+function cekBlurUmur() {
+  var umur = document.getElementById("umur").value;
+  if (umur !== "" && (isNaN(umur) || umur < 1 || umur > 100)) {
+    alert("Umur harus 1-100!");
+  }
+}
+}
+</script>
+</body>
+</html>

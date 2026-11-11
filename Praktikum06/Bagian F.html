@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan Validasi Form</title>
+</head>
+<body>
+  <h2>Form dengan Validasi JavaScript</h2>
+  <form id="myForm" onsubmit="return validateForm()">
+    <label>Nama (Wajib):</label>
+    <input type="text" id="nama"
+           onfocus="this.style.background='#ffffcc'"
+           onblur="this.style.background='white'; cekBlurNama()"><br><br>
+
+    <label>Email:</label>
+    <input type="email" id="email" onblur="cekBlurEmail()"><br><br>
+
+    <label>Umur (1-100):</label>
+    <input type="number" id="umur" onblur="cekBlurUmur()"><br><br>
+
+    <input type="submit" value="Kirim">
+  </form>
+
+  <script>
+    function validateForm() {
+      var nama = document.getElementById("nama").value;
+      if (nama.trim() === "") {
+        alert("Nama harus diisi");
+        return false;
+      }
+
+      var email = document.getElementById("email").value;
+      var polaEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(polaEmail)) {
+        alert("Email tidak valid");
+        return false;
+      }
+
+      var umur = document.getElementById("umur").value;
+      if (umur === "" || isNaN(umur) || umur < 1 || umur > 100) {
+        alert("Umur harus berupa angka antara 1 sampai 100");
+        return false;
+      }
+
+      alert("Form berhasil disubmit!");
+      return true;
+    }
+
+    function cekBlurNama() {
+      if (document.getElementById("nama").value.trim() === "")
+        alert("Nama tidak boleh kosong!");
+    }
+    function cekBlurEmail() {
+      var e = document.getElementById("email").value;
+      if (e !== "" && !e.match(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/))
+        alert("Format email salah!");
+    }
+    function cekBlurUmur() {
+      var u = document.getElementById("umur").value;
+      if (u !== "" && (isNaN(u) || u < 1 || u > 100))
+        alert("Umur harus 1-100!");
+    }
+  </script>
+</body>
+</html>

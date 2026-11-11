@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan Validasi Form</title>
+</head>
+<body>
+<script>
+// Validasi umur: angka 1-100
+var umur = document.getElementById("umur").value;
+if (umur === "" || isNaN(umur) || umur < 1 || umur > 100) {
+  alert("Umur harus berupa angka antara 1 sampai 100");
+  return false;
+}
+</script>
+</body>
+</html>
